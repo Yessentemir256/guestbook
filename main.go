@@ -1,9 +1,11 @@
 package main
 
 import (
+	"bufio"
 	"html/template"
 	"log"
 	"net/http"
+	"os"
 )
 
 func check(err error) {
