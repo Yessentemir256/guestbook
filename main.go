@@ -6,6 +6,11 @@ import (
 	"net/http"
 )
 
+type Guestbook struct {
+	SignatureCount int
+	Signatures     []string
+}
+
 func check(err error) {
 	if err != nil {
 		log.Fatal(err)
