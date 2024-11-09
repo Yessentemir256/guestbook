@@ -9,9 +9,10 @@ import (
 	"os"
 )
 
+// Guestbook - структура, используемая при отображении view.html
 type Guestbook struct {
-	SignatureCount int
-	Signatures     []string
+	SignatureCount int      // для хранения общего количества записей
+	Signatures     []string // для хранения самих записей
 }
 
 func check(err error) {
