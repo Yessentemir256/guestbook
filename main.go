@@ -15,12 +15,15 @@ type Guestbook struct {
 	Signatures     []string // для хранения самих записей
 }
 
+// check вызывает log.Fatal для любых ошибок отличных от nil
 func check(err error) {
 	if err != nil {
 		log.Fatal(err)
 	}
 }
 
+// getStrings	возвращает	сегмент	строк,	прочитанный	из	fileName,
+// по	одной	строке	на	каждую	строку	файла.
 func getStrings(fileName string) []string {
 	var lines []string
 	file, err := os.Open(fileName)
